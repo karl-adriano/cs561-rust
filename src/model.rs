@@ -8,10 +8,21 @@ use serde::{Serialize, Deserialize};
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Weather {
-    main: Main,
+    pub main: Main,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+pub struct Hello {
+    pub greeting: String,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+pub struct Auth {
+    pub accesstoken: String,
+    pub expires: String,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Main {
-    temp: f64,
+    pub temp: f64,
 }
